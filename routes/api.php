@@ -16,3 +16,14 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+
+//--------- append route 2019-12-13 12:55:45----------
+
+Route::any('/admin/users/list', 'Admin\UsersController@getList');
+Route::any('/admin/users/detail', 'Admin\UsersController@getDetail');
+Route::any('/admin/users/save', 'Admin\UsersController@save');
+Route::any('/admin/users/delete', 'Admin\UsersController@delete');
+Route::any('/admin/users/batch_delete', 'Admin\UsersController@batchDelete');

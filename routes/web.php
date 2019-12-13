@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+
+//--------- append route 2019-12-13 12:55:45----------
+
+Route::get('/admin/layout', 'Admin\RenderController@index');
+Route::get('/admin/layout/render', 'Admin\RenderController@render');
